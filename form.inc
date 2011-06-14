@@ -52,7 +52,7 @@ Dagens datum, ÅÅMMDD (t ex 110115):
 <input type="text" name="date" />
   (Pontus not; Varför?)
 
-<div style="clear: both;" />
+<div style="clear: both; margin-top: 2em;" />
   <input type="submit" name="skickat" value=" Skicka in " />
 
 
