@@ -133,7 +133,6 @@ if( !$_POST['skickat'])
     
     $form = file_get_contents('form.inc');
    
-    $form = str_replace('%CURRENTURL%','http://'. $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"],$form);
     $page = str_replace('%USABLEAREA%',$form,$template);
     print($page);
   }
