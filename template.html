@@ -1,45 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						 
-
-
-
-
-
-	
-		
-	
-  	
-
-
-
-								 
-
-
-
-
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">
 <head>
@@ -47,21 +5,6 @@
 	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 	<meta http-equiv="content-language" content="sv"/>
 
-	
-	
-    	
-    
-	
-	    
-    
-
-	
-	
-
-	
-	
-
-	
 
 	<link href="http://www.psyk.uu.se/ViewPage.action?siteNodeId=6978&amp;amp;languageId=3&amp;amp;contentId=-1" rel="stylesheet" type="text/css" />
 	 
@@ -73,11 +16,7 @@
 
 	<title>Psykologmottagningen - Uppsala universitet</title>
 		
-	
-	<script language="javascript" type="text/javascript" src="http://www.psyk.uu.se/script/uu/jquery.min.js"></script>
-	
-	
-	
+
 		<script type="text/javascript">
 	// Google Analytics tracking code
 	var _gaq = _gaq || [];
@@ -102,7 +41,7 @@
 	<div id="header">
 		<div class="headerComponent componentContainer">
 	<div class="toppImg">
-		<h1 class="logo"> <a href="http://www.uu.se"  accesskey="1" tabindex="2"><img height="125" width="125" src="http://www.psyk.uu.se/digitalAssets/22/22975_UU_logga_transp.png" alt="Uppsala universitet" title="Uppsala universitet"   /></a><span class="alt-logo">Uppsala universitet</span> </h1>
+		<h1 class="logo"> <a href="http://www.uu.se"  accesskey="1" tabindex="2"><img height="125" width="125" src="https://www.uu.se/Logo/uulogo_grey.png" alt="Uppsala universitet" title="Uppsala universitet"   /></a><span class="alt-logo">Uppsala universitet</span> </h1>
    	</div>
 	<div class="toppNav"> 
 		<ul class="icons">
@@ -167,12 +106,6 @@
 		
 
 				
-		<li class="rs_skip listen">
-			<a accesskey="L" 
-			   href="http://app.readspeaker.com/cgi-bin/rsent?customerid=4462&amp;lang=sv_se&amp;voice=elin22k&amp;readid=readSpeakerContent&amp;url=http%3A%2F%2Fwww-hotel.uu.se%2psyk%2F%3FlanguageId%3D3" 
-			   target="_blank" 
-			   onclick="readpage(this.href, 'xp1'); return false;">Lyssna |</a>
-		</li>
 	
 </ul>
     	<h1 class="siteName">Institutionen för psykologi</h1>
@@ -416,89 +349,9 @@
 </div>
 	
 	
-	<script type="text/javascript" src="http://infoglue.uu.se/common/js/toc"></script>
-<script type="text/javascript">
-		jQuery(function() {
-			 
-			var uniqueId = 'component_3';
+	<script type="text/javascript" src="https://infoglue.uu.se/common/js/toc"></script>
 
-			var text = jQuery('#article_' + uniqueId + ' .articleText');
-			toc(text, '#article_' + uniqueId + ' .toc');
-		});
-	</script>
-<script type="text/javascript">
-	
-	function Article_print(uniqueId) {
-		try {
-			var articleId = '#articleText_' + uniqueId;
-			var headerId = "#articleHeader_" + uniqueId;		
 
-			var printButtonClass = "printButtonInPopup";
-
-				
-			var head = unescape('%3Chtml%3E%3Chead%3E') + jQuery('head').html() + unescape('%3C/head%3E');
-				
-			var header = jQuery(headerId).html();
-				
-			var article = jQuery(articleId).html();
-			
-			var toc = unescape("%3Cdiv%20class%3D%22toc%22%3E") + jQuery('.toc', jQuery(articleId).parent()).html() + unescape("%3C/div%3E");
-				
-			var printLink = unescape("%3Cdiv%20class%3D%22printControl%22%3E%3Cp%3E%3Ca%20class%3D%22" + printButtonClass + "%22%20href%3D%22%22%3E") + 'Skriv ut' + unescape("%3C/a%3E%3C/p%3E%3C/div%3E");
-
-			 
-			var printWindow = window.open('', 'print_content', 'width=650,height=800,toolbar=0,resizable=1,location=0,menubar=1,scrollbars=1,status=1');
-			
-			
-			 	
-			printWindow.document.open();
-			printWindow.document.write(head + '\n' + 
-									   unescape('%3Cbody%20class%3D%22printBody%22%3E') + '\n' + 
-									   printLink + '\n' + 
-									   header + '\n' +
-									   
-									   article + '\n' +  
-									   unescape('%3C/body%3E%3C/html%3E'));
-			printWindow.document.close();
-
-			
-			var interval = 100;
-			var intervalId = setInterval(function() {
-				var printButton = jQuery('.' + printButtonClass, printWindow.document.body);
-				if (printButton.length !== 0) {
-					printButton.click(function(e) {
-						e.preventDefault(); 
-						printWindow.print(); 
-						return false;
-					});
-					clearInterval(intervalId);
-					printWindow.print(); 
-				}
-			}, interval);
-			
-		} catch (error) {
-			
-			
-			alert(error);
-		}
-	}
-</script>
-<script type="text/javascript">
-	jQuery(function() {
-		 
-		var uniqueId = 'component_3';
-		var printButtonId = '#printButton_' + uniqueId;
-		
-		jQuery(printButtonId).click(function(event) {
-				Article_print(uniqueId);
-		
-			return false;
-		});
-	});
-</script>
-
-<script type="text/javascript" src="http://infoglue.uu.se/common/js/addtoany"></script>
-<script type="text/javascript" src="http://www.psyk.uu.se/script/uu/readspeaker_embhl_sv.js"></script>
 
 </body>
 </html>

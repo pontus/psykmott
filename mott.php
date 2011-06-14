@@ -1,6 +1,6 @@
 <?php
 
-$recipient = 'pontus.freyhult@uadm.uu.se';
+$recipient = 'mottagning@psyk.uu.se';
 $certfile = 'pontskol.pem';
 
 $encryptheaders = array(
