@@ -3,7 +3,7 @@
 TEST - använd ej
 
 <p/>
-Här kan du göra en intresseanmälan. När du fyllt i samtliga fält tryck på knappen Skicka in. Om du ångrar dig och inte vill ha kontakt, tryck istället på knappen rensa. Om du ångrar dig efter att du skickat iväg dina svar, vänligen ring 018-471 7128.
+Här kan du göra en intresseanmälan. När du fyllt i samtliga fält tryck på knappen Skicka in. Om du ångrar dig efter att du skickat iväg dina svar, vänligen ring 018-471 7128.
 
 <p/>
 <form method="POST" action="%CURRENTURL%">
@@ -52,8 +52,8 @@ Dagens datum, ÅÅMMDD (t ex 110115):
 <input type="text" name="date" />
   (Pontus not; Varför?)
 
-<div style="clear: both; margin-top: 2em;" />
-  <input type="submit" name="skickat" value=" Skicka in " />
+<div style="clear: both;" />
+  <input type="submit" name="skickat" value=" Skicka in " style="margin-top: 2em;" />
 
 
 </form>
