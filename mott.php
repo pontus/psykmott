@@ -26,7 +26,8 @@ $msg =  "Content-type: text/plain; charset=utf-8\n" .
   "Mobil:  " . $_POST['cellphone'] . "\n\n" . 
   "E-post: " . $_POST['mail'] . "\n\n" . 
   "Datum:  " . $_POST['date'] . "\n\n" .  
-  "Orsak:  " . $_POST['reason'] . "\n\n" ;
+  "Orsak:  " . $_POST['reason'] . "\n\n" .
+  "Texten nedan är för systemanvändning och kan ignoreras: \n\n";
 
 
 function sendit($mailmsg)
@@ -99,7 +100,43 @@ function signit()
 
   if (!$tmpin || !$tmpout)
     return false;   
- 
+
+
+  // This may seem weird, but it doesn't hurt to put some randomness in the mix
+  // (RC2-128 is the best we can offer).
+
+  $iter = rand(3,70);
+
+  for($i = 1; $i<$iter; $i++)
+    {
+      $left = 'X-'
+      $nleft = rand(1,30);
+      for ($j = 1; $j<$nleft; $j++)
+	{
+	  $left = $left . chr(65+rand(0,26));
+	}
+
+      $right = ''
+      $nright = rand(3,42);
+      for ($j = 1; $j<$nright; $j++)
+	{
+	  $right = $right . chr(65+rand(0,26));
+	}
+
+      $msg = $left . ': ' . $right . '\n' . $msg;
+    }
+
+  $iter = rand(256, 4096);
+  $footer = '';
+  for($i = 1; $i<$iter; $i++)
+    {
+      $footer = $footer . chr(rand(0,255));
+    }
+
+  $msg = $msg . chunk_split(base64_encode($footer),60);
+
+  // End of weirdness, promise!
+
   if (false === file_put_contents($tmpin,$msg))
     return;
 
