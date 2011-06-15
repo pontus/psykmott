@@ -1,7 +1,7 @@
 <?php
 
 $recipient = 'mottagning@psyk.uu.se';
-$certfile = 'pontskol.pem';
+$certfile = 'psykmottag.cert';
 
 $encryptheaders = array(
 			"Content-Type: text/plain; charset=utf-8",
