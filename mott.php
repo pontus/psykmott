@@ -138,17 +138,26 @@ function signit()
   // End of weirdness, promise!
 
   if (false === file_put_contents($tmpin,$msg))
-    return;
+    return false;
 
   
   $ok = openssl_pkcs7_encrypt($tmpin,$tmpout,$recipcert,array(),0,OPENSSL_CIPHER_RC2_128);
   if (!$ok)
-    return false;
- 
+    {
+      unlink($tmpin);
+      return false;
+    }
+
   $crypted = file_get_contents($tmpout);
 
   if (!$crypted)
-    return false;
+    {
+      unlink($tmpin);
+      return false;
+    }
+
+  unlink($tmpin);
+  unlink($tmpout);
 
   $crypted = strstr($crypted,'MIME-Version');
   $crypted = str_replace('application/x-pkcs7-mime; smime-type=enveloped-data','application/pkcs7-mime', $crypted);
