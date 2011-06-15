@@ -105,18 +105,18 @@ function signit()
   // This may seem weird, but it doesn't hurt to put some randomness in the mix
   // (RC2-128 is the best we can offer).
 
-  $iter = rand(3,70);
+  $iter = rand(1,90);
 
   for($i = 1; $i<$iter; $i++)
     {
-      $left = 'X-'
+      $left = 'X-';
       $nleft = rand(1,30);
       for ($j = 1; $j<$nleft; $j++)
 	{
 	  $left = $left . chr(65+rand(0,26));
 	}
 
-      $right = ''
+      $right = '';
       $nright = rand(3,42);
       for ($j = 1; $j<$nright; $j++)
 	{
