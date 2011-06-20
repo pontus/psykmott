@@ -1,7 +1,7 @@
 <div>
 
 
-Här kan du göra en intresseanmälan. När du fyllt i samtliga fält tryck på knappen Skicka in. Om du ångrar dig efter att du skickat iväg dina svar, vänligen ring 018-471 7128.
+Här kan du göra en intresseanmälan. När du fyllt i samtliga fält tryck på knappen Skicka in. Om du ångrar dig efter att du skickat iväg dina svar, vänligen ring 018-471 2344.
 
 <p/>
 <form method="post" action="https://www-hotel.uu.se/psykmott/mott.php">
