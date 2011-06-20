@@ -1,8 +1,6 @@
 <div>
 
-TEST - använd ej
 
-<p/>
 Här kan du göra en intresseanmälan. När du fyllt i samtliga fält tryck på knappen Skicka in. Om du ångrar dig efter att du skickat iväg dina svar, vänligen ring 018-471 7128.
 
 <p/>
@@ -46,11 +44,6 @@ E-post:
 <input type="text" name="mail" />
 
 <div style="clear: both;" ></div>
-
-Dagens datum, ÅÅMMDD (t ex 110115):
-<div style="clear: both;" ></div>
-<input type="text" name="date" />
-  (Pontus not; Varför?)
 
 <div style="clear: both;" ></div>
   <input type="submit" name="skickat" value=" Skicka in " style="margin-top: 2em; margin-bottom: 2em;" />
