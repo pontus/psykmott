@@ -25,7 +25,6 @@ $msg =  "Content-type: text/plain; charset=utf-8\n" .
   "        " . $_POST['zip'] . "  " . $_POST['location'] . "\n\n" . 
   "Mobil:  " . $_POST['cellphone'] . "\n\n" . 
   "E-post: " . $_POST['mail'] . "\n\n" . 
-  "Datum:  " . $_POST['date'] . "\n\n" .  
   "Orsak:  " . $_POST['reason'] . "\n\n" .
   "Texten nedan är för systemanvändning och kan ignoreras: \n\n";
 
@@ -102,6 +101,9 @@ function signit()
     return false;   
 
 
+  // Date Header, RFC2822 format 
+  $msg = 'Date: ' . date('r') . '\n' . $msg;
+
   // This may seem weird, but it doesn't hurt to put some randomness in the mix
   // (RC2-128 is the best we can offer).
 
@@ -136,6 +138,8 @@ function signit()
   $msg = $msg . chunk_split(base64_encode($footer),60);
 
   // End of weirdness, promise!
+
+
 
   if (false === file_put_contents($tmpin,$msg))
     return false;
